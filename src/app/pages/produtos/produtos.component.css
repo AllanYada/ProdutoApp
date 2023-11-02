@@ -1,3 +1,30 @@
 table {
     width: 100%;
   }
+
+  .button-actions {
+    display: flex;
+    gap: 15px;
+  }
+
+  .button-actions button {
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 4px;
+  }
+
+  table .btn-editar {
+   border: 1px solid lightseagreen;
+  }
+
+  table .btn-excluir {
+    border: 1px solid red;
+   }
+
+  
+  table .btn-editar:hover , table .btn-excluir:hover {
+    background-color: #CCCCCC;
+   }
+

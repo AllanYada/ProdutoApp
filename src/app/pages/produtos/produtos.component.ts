@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from 'src/app/interfaces/Produto';
 import { ProdutosService } from 'src/app/services/produtos.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from 'src/app/components/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-produtos',
@@ -10,17 +12,28 @@ import { ProdutosService } from 'src/app/services/produtos.service';
 export class ProdutosComponent implements OnInit {
  
   produtos: Produto[] = []
-  displayedColumns = ['id', 'codigo_barras', 'nome', 'preco'];
+  displayedColumns = ['nome', 'codigo_barras', 'preco', 'acoes'];
 
   constructor(
-    private produtoService: ProdutosService
+    private produtoService: ProdutosService,
+    private dialog: MatDialog
   ) {}
 
    ngOnInit(): void {
-    this.produtoService.getProdutos().subscribe(data => {
-      this.produtos = data;
-      console.log(this.produtos);
+    this.produtoService.getProdutos().subscribe(data =>this.produtos = data);
+  }
+
+  removeProduto(id: number) {
+    this.dialog.open(ConfirmDialogComponent, {
+      data: 'O registro será excluido'
+    })
+
+   this.dialog.afterAllClosed.subscribe(() => {
+    this.produtoService.removeProduto(id).subscribe(() => {
+      this.produtoService.getProdutos().subscribe(data =>this.produtos = data);
     });
+   })
+
   }
 
 }

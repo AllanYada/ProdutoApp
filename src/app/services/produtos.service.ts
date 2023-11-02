@@ -15,4 +15,9 @@ export class ProdutosService {
   getProdutos() : Observable<Produto[]> {
     return this.http.get<Produto[]>(this.API);
   }
+
+  removeProduto(id :number) : Observable<any>  {
+    return this.http.delete(`${this.API}/${id}`);
+  }
+
 }

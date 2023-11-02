@@ -1,0 +1,16 @@
+.dialog {
+    padding: 20px 70px;
+    border-radius: 5%;
+  }
+
+  
+  button {
+    padding: 4px 8px;
+  }
+  
+  button:hover {
+    color: white;
+    background-color: gray;
+    cursor: pointer;
+  }
+  
