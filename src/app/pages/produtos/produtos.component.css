@@ -11,6 +11,7 @@
     font-weight: bold;
     font-size: 16px;
     color: #007bff;
+    font-size: 16px;
 }
 
   .button-actions {
@@ -24,6 +25,10 @@
     font-size: 13px;
     text-transform: uppercase;
     padding: 4px;
+  }
+
+  table {
+    width: 500px;
   }
 
   table a {

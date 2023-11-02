@@ -1,3 +1,6 @@
 h1 {
     margin-left: 70px;
+    padding: 4px 8px;
+    border: 2px solid black;
+    width: 10.5%;
 }
