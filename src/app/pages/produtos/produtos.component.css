@@ -1,3 +1,17 @@
+.new-person {
+    margin: 40px 0;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.new-person a  {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
 table {
     width: 100%;
   }
@@ -7,7 +21,7 @@ table {
     gap: 15px;
   }
 
-  .button-actions button {
+  .button-actions button, table a {
     background: transparent;
     cursor: pointer;
     font-size: 13px;
@@ -15,16 +29,17 @@ table {
     padding: 4px;
   }
 
-  table .btn-editar {
+  table a {
    border: 1px solid lightseagreen;
+   font-weight: 500;
   }
 
-  table .btn-excluir {
+  table .btn {
     border: 1px solid red;
    }
 
   
-  table .btn-editar:hover , table .btn-excluir:hover {
+  table a:hover , table .btn:hover {
     background-color: #CCCCCC;
    }
 

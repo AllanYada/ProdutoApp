@@ -11,6 +11,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { EditProdutoComponent } from './pages/edit-produto/edit-produto.component';
+import { NewProdutoComponent } from './pages/new-produto/new-produto.component';
+import { ProdutoFormComponent } from './components/produto-form/produto-form.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +22,10 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     HeaderComponent,
     CadastrarProdutosComponent,
     ProdutosComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    EditProdutoComponent,
+    NewProdutoComponent,
+    ProdutoFormComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,9 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     MatTableModule,
     HttpClientModule,
     AppRoutingModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
