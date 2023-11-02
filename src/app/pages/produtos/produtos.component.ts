@@ -23,21 +23,24 @@ export class ProdutosComponent implements OnInit {
     this.produtoService.getProdutos().subscribe(data =>this.produtos = data);
   }
 
+
   removeProduto(id: number) {
-    this.dialog.open(ConfirmDialogComponent, {
-      data: 'Você deseja excluir esse Produto?'
-    })
-
-
-   this.dialog.afterAllClosed.subscribe(result => {
-
-    console.log(result);
-
-    this.produtoService.removeProduto(id).subscribe(() => {
-      this.produtoService.getProdutos().subscribe(data =>this.produtos = data);
-    });
-   })
-
-  }
+    
+      const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+        data: 'Você deseja excluir esse produto?',
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {  
+        if(result == 'yes' ) {
+          this.produtoService.removeProduto(id).subscribe(() => {
+            this.produtoService.getProdutos().subscribe(data =>this.produtos = data);
+          });
+        
+        }
+  
+      });
+  
+   
+}
 
 }

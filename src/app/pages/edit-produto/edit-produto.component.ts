@@ -37,7 +37,7 @@ export class EditProdutoComponent implements OnInit {
       id: produtoData.id,
       nome: produtoData.nome,
       codigo_barras: produtoData.codigo_barras,
-      preco: produtoData.preco
+      preco: Number(produtoData.preco)
      }
 
      this.produtoService.updateProduto(produto).subscribe(() => {

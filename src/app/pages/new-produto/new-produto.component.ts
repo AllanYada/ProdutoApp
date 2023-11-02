@@ -19,17 +19,15 @@ export class NewProdutoComponent {
     ) {}
 
   registrarHandler(FormGroup : FormGroup) {
-    console.log('TESTE------------------------');
      const produtoData = FormGroup.value;
 
      const produto : Produto = {
       nome: produtoData.nome,
       codigo_barras: produtoData.codigo_barras,
-      preco: produtoData.preco
+      preco: Number(produtoData.preco)
      }
 
      this.produtoService.saveProduto(produto).subscribe(() => {
-      console.log('TESTE');
            this.router.navigate(['/']);
      });
 

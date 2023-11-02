@@ -21,8 +21,8 @@ export class ProdutoFormComponent {
     this.produtoForm = new FormGroup({
     id: new FormControl(this.produto? this.produto.id : ''),
     nome: new FormControl(this.produto? this.produto.nome : '', [Validators.required]),
-    codigo_barras: new FormControl(this.produto? this.produto.codigo_barras : '', [Validators.required]),
-    preco: new FormControl(this.produto? this.produto.preco : '', [Validators.required]),
+    codigo_barras: new FormControl(this.produto? this.produto.codigo_barras : '', [Validators.required, Validators.minLength(10)]),
+    preco: new FormControl(this.produto? this.produto.preco : '', [Validators.required, Validators.pattern('^[0-9]*$')]),
     });
   }
 
