@@ -1,1 +1,4 @@
-<p>edit-produto works!</p>
+<div *ngIf="produto!" class="edit">
+    <h2>Atualizando o Produto {{ produto.nome }} </h2>
+    <app-produto-form [btnText]="btnText" [produto]="produto" (onSubmit)="updateHandler($event)"></app-produto-form>
+  </div>

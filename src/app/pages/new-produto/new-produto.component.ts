@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Produto } from 'src/app/interfaces/Produto';
 import { ProdutosService } from 'src/app/services/produtos.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({

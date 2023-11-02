@@ -16,8 +16,16 @@ export class ProdutosService {
     return this.http.get<Produto[]>(this.API);
   }
 
+  getProduto(id : number) : Observable<Produto> {
+    return this.http.get<Produto>(`${this.API}/${id}`);
+  }
+
  saveProduto(produto : Produto) : Observable<Produto> {
     return this.http.post<Produto>(this.API, produto);
+ }
+
+ updateProduto(produto : Produto) : Observable<Produto> {
+  return this.http.put<Produto>(this.API, produto);
  }
 
   removeProduto(id :number) : Observable<any>  {
