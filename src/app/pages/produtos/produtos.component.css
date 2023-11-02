@@ -9,12 +9,9 @@
 .new-person a  {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
+    color: #007bff;
 }
-
-table {
-    width: 100%;
-  }
 
   .button-actions {
     display: flex;
