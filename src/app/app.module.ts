@@ -14,6 +14,7 @@ import { EditProdutoComponent } from './pages/edit-produto/edit-produto.componen
 import { NewProdutoComponent } from './pages/new-produto/new-produto.component';
 import { ProdutoFormComponent } from './components/produto-form/produto-form.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     ConfirmDialogComponent,
     EditProdutoComponent,
     NewProdutoComponent,
-    ProdutoFormComponent
+    ProdutoFormComponent,
+    ErrorDialogComponent
   ],
   imports: [
     BrowserModule,
