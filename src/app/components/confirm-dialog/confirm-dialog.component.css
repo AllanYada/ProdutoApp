@@ -3,9 +3,15 @@
     border-radius: 5%;
   }
 
+  .buttons {
+   display: flex;
+   gap: 15px;
+  }
   
-  button {
+  .buttons button {
     padding: 4px 8px;
+    font-size: 15px;
+
   }
   
   button:hover {

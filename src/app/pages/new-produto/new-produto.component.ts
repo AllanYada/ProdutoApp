@@ -19,7 +19,7 @@ export class NewProdutoComponent {
     ) {}
 
   registrarHandler(FormGroup : FormGroup) {
-
+    console.log('TESTE------------------------');
      const produtoData = FormGroup.value;
 
      const produto : Produto = {
@@ -29,6 +29,7 @@ export class NewProdutoComponent {
      }
 
      this.produtoService.saveProduto(produto).subscribe(() => {
+      console.log('TESTE');
            this.router.navigate(['/']);
      });
 

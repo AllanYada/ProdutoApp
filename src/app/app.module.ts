@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { CadastrarProdutosComponent } from './pages/cadastrar-produtos/cadastrar-produtos.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table'
@@ -20,7 +19,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
   declarations: [
     AppComponent,
     HeaderComponent,
-    CadastrarProdutosComponent,
     ProdutosComponent,
     ConfirmDialogComponent,
     EditProdutoComponent,

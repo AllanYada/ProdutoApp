@@ -3,9 +3,32 @@ header  {
     padding: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     text-transform: uppercase;
     text-align: center;
+    margin-left: 850px;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav li {
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+nav li:hover {
+   background-color: #CCCCCC;
+}
+
+ul {
+    display: flex;
+    gap: 10px;
 }

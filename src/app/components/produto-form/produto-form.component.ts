@@ -19,7 +19,7 @@ export class ProdutoFormComponent {
 
   ngOnInit() {
     this.produtoForm = new FormGroup({
-    id: new FormControl(this.produto? this.produto.id : '', [Validators.required]),
+    id: new FormControl(this.produto? this.produto.id : ''),
     nome: new FormControl(this.produto? this.produto.nome : '', [Validators.required]),
     codigo_barras: new FormControl(this.produto? this.produto.codigo_barras : '', [Validators.required]),
     preco: new FormControl(this.produto? this.produto.preco : '', [Validators.required]),

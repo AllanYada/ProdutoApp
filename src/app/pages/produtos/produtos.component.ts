@@ -25,10 +25,14 @@ export class ProdutosComponent implements OnInit {
 
   removeProduto(id: number) {
     this.dialog.open(ConfirmDialogComponent, {
-      data: 'O registro será excluido'
+      data: 'Você deseja excluir esse Produto?'
     })
 
-   this.dialog.afterAllClosed.subscribe(() => {
+
+   this.dialog.afterAllClosed.subscribe(result => {
+
+    console.log(result);
+
     this.produtoService.removeProduto(id).subscribe(() => {
       this.produtoService.getProdutos().subscribe(data =>this.produtos = data);
     });
